@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+</body>
+</html>
+<div class="card">
+    <p>To the love of my life:</p>
+    <h2>If i could chose a place to be, will be next to you for the rest of my life.</h2>
+    <p>Every day my love for you it's bigger.</p>
+    
+    <div class="tree-container">
+        <span style="font-size: 100px;"></span>
+    </div>
+
+    <div class="contador">
+        <p>My infinite love for you started...</p>
+        <div id="reloj">Time...</div>
+    </div>
+</div>
+
+<script>
+    // Configura la fecha en la que empezaron (Año, Mes - 1, Día)
+    // Nota: Enero es 0, Febrero es 1, etc.
+    const fechaInicio = new Date(2025, 3, 20); 
+
+    function actualizarContador() {
+        const ahora = new Date();
+        const diferencia = ahora - fechaInicio;
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+        const minutos = Math.floor((diferencia / 1000 / 60) % 60);
+        const segundos = Math.floor((diferencia / 1000) % 60);
+
+        document.getElementById('reloj').innerHTML = 
+            `${dias} days ${horas} hours ${minutos} minutes ${segundos} seconds ago...`;
+    }
+
+    setInterval(actualizarContador, 1000);
+
+    function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('falling-heart');
+    
+    // Iconos variados para que no sean todos iguales
+    const types = ['❤️', '💖', '💕', '💗'];
+    heart.innerText = types[Math.floor(Math.random() * types.length)];
+    
+    // Posición horizontal aleatoria
+    heart.style.left = Math.random() * 100 + "vw";
+    
+    // Duración de caída aleatoria (entre 3 y 6 segundos)
+    const duration = Math.random() * 3 + 3;
+    heart.style.animationDuration = duration + "s";
+    
+    // Tamaño aleatorio
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    
+    document.body.appendChild(heart);
+    
+    // Eliminar el corazón después de que termine la animación para no saturar la memoria
+    setTimeout(() => {
+        heart.remove();
+    }, duration * 1000);
+}
+
+// Crear un corazón cada 300ms
+setInterval(createHeart, 300);
+
+</script>
