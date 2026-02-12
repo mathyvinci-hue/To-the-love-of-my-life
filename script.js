@@ -170,3 +170,31 @@
 
 
    
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('falling-heart');
+    
+    // Iconos variados para que no sean todos iguales
+    const types = ['❤️', '💖', '💕', '💗'];
+    heart.innerText = types[Math.floor(Math.random() * types.length)];
+    
+    // Posición horizontal aleatoria
+    heart.style.left = Math.random() * 100 + "vw";
+    
+    // Duración de caída aleatoria (entre 3 y 6 segundos)
+    const duration = Math.random() * 3 + 3;
+    heart.style.animationDuration = duration + "s";
+    
+    // Tamaño aleatorio
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    
+    document.body.appendChild(heart);
+    
+    // Eliminar el corazón después de que termine la animación para no saturar la memoria
+    setTimeout(() => {
+        heart.remove();
+    }, duration * 1000);
+}
+
+// Crear un corazón cada 300ms
+setInterval(createHeart, 300);
