@@ -1,5 +1,5 @@
 body {
-    background-color: #f8e1e7; /* Rosa suave */
+    background-color: hsl(344, 65%, 65%); /* Rosa suave */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,23 +11,23 @@ body {
     background-color: #fff5f5;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgb(209, 67, 67);
     text-align: center;
     max-width: 400px;
 }
 
 h2 {
-    color: #d63384;
+    color: #fb439f;
     font-style: italic;
 }
 
 #reloj {
     font-weight: bold;
     font-size: 1.2em;
-    color: #555;
+    color: #000000;
 }
 body {
-    background: #fdf2f4;
+    background: #e57c8f;
     font-family: 'Merriweather', serif; /* Una fuente tipo manuscrita queda genial */
     display: flex;
     justify-content: center;
@@ -37,10 +37,10 @@ body {
 }
 
 .card {
-    background: white;
+    background: rgb(240, 215, 235);
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.2);
+    box-shadow: 0 10px 30px rgba(178, 48, 113, 0.968);
     text-align: center;
     max-width: 450px;
     position: relative;
@@ -56,7 +56,7 @@ body {
 .timer {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #444;
+    color: #000000;
     background: #fff0f3;
     padding: 10px;
     border-radius: 10px;
