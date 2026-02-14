@@ -95,3 +95,30 @@ body {
 }
 
 
+.galeria-fotos {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    flex-wrap: wrap; /* Para que se acomoden si son varias */
+    justify-content: center;
+    gap: 20px; /* Espacio entre fotos */
+    padding: 20px;
+}
+
+.foto-amor {
+    width: 250px; /* Tamaño de la foto */
+    height: 250px;
+    object-fit: cover; /* Recorta la imagen para que sea cuadrada sin deformarse */
+    border: 5px solid white;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.foto-amor:hover {
+    transform: scale(1.05) rotate(2deg); /* Se agranda un poquito al pasar el mouse */
+}
+
